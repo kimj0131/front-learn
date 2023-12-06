@@ -1,0 +1,44 @@
+body {
+	/* body태그는 기본적으로 여백이 조금 지정되어 있다. */
+	/* margin: 0; */
+}
+
+#testDiv1 {
+	border: solid 3px black;
+	width: 50%; /* 내부의 컨텐츠박스가 설정이 된다. */
+	height: 200px;
+	margin: auto;
+	padding: 50px;
+}
+
+#testDiv2 {
+	border: solid 3px black;
+	width: 500px;
+	height: 200px;
+	margin: 80px 0;
+}
+
+#testDiv3 {
+	border: solid 3px black;
+	width: 200px;
+	height: 150px;
+	margin: auto; /* 웹 브라우저상 가운데로 정렬된다 */
+}
+
+/* 전체 크기는 width + border-width + padding 이다 */
+#content-box {
+	box-sizing: content-box;
+	width: 200px;
+	height: 200px;
+	border: solid 5px black;
+	padding: 30px;
+}
+
+/* padding과 border-width에 영향을 받지 않고 width/height만으로 전체 크기를 결정 */
+#border-box {
+	box-sizing: border-box;
+	width: 200px;
+	height: 200px;
+	border: solid 5px black;
+	padding: 30px;
+}

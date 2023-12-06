@@ -1,0 +1,14 @@
+/* css03.css */
+
+.detail {
+	font-size: 0.8em;
+}
+
+#quiz1 > li:nth-child(even) {
+	border: red solid 2px;
+}
+
+#quiz2 > li:last-child,
+#quiz2 > li:first-child {
+	color: red;
+}
