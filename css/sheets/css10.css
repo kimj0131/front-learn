@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+
+#google-font-ex1 {
+	/* 폰트를 적용할 때 ,를 사용해 여러개를 적용해 두면 앞의 글꼴이 사용될 수 없을때 뒤의 글꼴을 사용된다. */
+	font-family: "Nanum Brush Script", "굴림", cursive;
+	font-size: 25px;
+}
+
+#google-font-ex2 {
+	font-size: 35px;
+	/* font-family: "Do Hyeon", sans-serif; */
+	font-family: "Nanum Pen Script", cursive;
+	text-shadow: 3px -3px 3px black;
+}
+
+#google-font-ex3 {
+	font-size: 35px;
+	font-family: "Hi Melody", sans-serif;
+	text-shadow: 0 0 5px black;
+}
+
+#google-font-ex4 {
+	font-size: 35px;
+	font-family: "Cute Font", sans-serif;
+}
