@@ -1,0 +1,157 @@
+[id*="div"] {
+	border: 3px solid black;
+	width: 500px;
+	text-align: justify;
+}
+
+#img1-1 {
+	width: 150px;
+	height: auto;
+	float: right;
+}
+
+#img1-2 {
+	width: 150px;
+	height: auto;
+	float: right;
+}
+
+#img2-1 {
+	width: 150px;
+	height: auto;
+	float: right;
+}
+
+#img2-2 {
+	width: 150px;
+	height: auto;
+	float: left;
+}
+
+#img3-1 {
+	width: 150px;
+	height: auto;
+	float: left;
+}
+
+#img3-2 {
+	width: 150px;
+	height: auto;
+	float: right;
+	clear: left; /* 왼쪽에 다른 float 요소가 없게끔 비워줌 */
+}
+
+#img4-1 {
+	width: 150px;
+	height: auto;
+	float: left;
+}
+
+#img4-2 {
+	width: 150px;
+	height: auto;
+	float: right;
+}
+
+#img5-2 {
+	width: 150px;
+	height: auto;
+	float: right;
+}
+
+/*  */
+
+#float-layout {
+	border: 1px solid black;
+	width: 100%;
+	color: white;
+}
+#float-layout > div {
+	height: 100px;
+	float: left;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+#float-layout > :first-child {
+	background-color: maroon;
+	width: 20%;
+}
+
+#float-layout > :nth-child(2) {
+	background-color: salmon;
+	width: 60%;
+}
+
+#float-layout > :nth-child(3) {
+	background-color: seagreen;
+	width: 20%;
+}
+
+#float-layout > :nth-child(4) {
+	background-color: burlywood;
+	height: 500px;
+	width: 80%;
+}
+
+#float-layout > :nth-child(5) {
+	background-color: darkslateblue;
+	height: 500px;
+	width: 20%;
+}
+
+/* 마감처리 */
+#float-layout::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*  */
+
+#float-layout-ex1 {
+	border: 1px solid black;
+	width: 250px;
+	height: 400px;
+}
+
+#float-layout-ex1 > div {
+	color: deepskyblue;
+	border: 1px solid black;
+	font-size: 20px;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+}
+
+#float-layout-ex1 > :first-child {
+	height: 10%;
+	width: 100%;
+}
+
+#float-layout-ex1 > :nth-child(2) {
+	height: 10%;
+	width: 100%;
+}
+#float-layout-ex1 > :nth-child(3) {
+	height: 25%;
+	width: 60%;
+
+	padding-top: 12.5%;
+}
+#float-layout-ex1 > :nth-child(4) {
+	height: 70%;
+	width: 40%;
+	float: right;
+	padding-top: 50%;
+}
+#float-layout-ex1 > :nth-child(5) {
+	height: 45%;
+	width: 60%;
+
+	padding-top: 27.5%;
+}
+#float-layout-ex1 > :nth-child(6) {
+	height: 10%;
+	width: 100%;
+}
