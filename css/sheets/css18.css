@@ -1,0 +1,106 @@
+* {
+	box-sizing: border-box;
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 500px;
+	height: 500px;
+}
+
+.flex-container > div {
+	width: 50%;
+	height: 50%;
+}
+
+.flex-container > :first-child {
+	background-color: red;
+	/* 모든 프로퍼티를 3초의 시간 동안 변화시킨다 */
+	transition: all 3s;
+}
+
+.flex-container > :first-child:hover {
+	background-color: blue;
+}
+
+.flex-container > :nth-child(2) {
+	background-color: orange;
+	/* 원하는 속성을 세부적으로 각각 조정할 수 있다 */
+	transition-property: background-color, font-size, padding, color;
+	transition-duration: 0.5s, 2s, 1s, 3s;
+
+	/* 모든 속성의 transition-property를 한번에 지정한다 */
+	/* transition: all 0.5s; */
+}
+
+.flex-container > :nth-child(2):hover {
+	background-color: purple;
+	color: white;
+	font-size: 65px;
+	padding: 80px;
+}
+
+.flex-container > :nth-child(3) {
+	background-color: seagreen;
+}
+
+.flex-container > :nth-child(3) > div {
+	border: solid 3px black;
+	color: white;
+	width: 40%;
+	background-color: salmon;
+	margin: 5%;
+	transition: width 2s;
+}
+
+/* 화면이 변할때 변화를 준다 */
+/* 참고 : https://velog.io/@cada/CSS-Transition-%EC%86%8D%EC%84%B1%EC%97%90%EC%84%9C-transition-timing-function-%EA%B0%92%EC%97%90-%EB%94%B0%EB%A5%B8-%EC%B0%A8%EC%9D%B4 */
+.flex-container > :nth-child(3) > div:first-child {
+	transition-timing-function: ease;
+}
+.flex-container > :nth-child(3) > div:nth-child(2) {
+	/* 일정속도로 끝까지간다 */
+	transition-timing-function: linear;
+}
+.flex-container > :nth-child(3) > div:nth-child(3) {
+	/* 느리게 시작해서 시간이 지날수록 빨라진다 */
+	transition-timing-function: ease-in;
+}
+.flex-container > :nth-child(3) > div:nth-child(4) {
+	/* 빠르게 시작해서 시간이 지날수록 느려진다 */
+	transition-timing-function: ease-out;
+}
+.flex-container > :nth-child(3) > div:nth-child(4) {
+	/* 느리게 시작해서 빠르게간 후 다시 느려진다 */
+	transition-timing-function: ease-in-out;
+}
+
+.flex-container > :nth-child(3) > div:hover {
+	width: 90%;
+}
+
+/*  */
+
+.flex-container > :nth-child(4) > div {
+	border: solid 3px black;
+	color: white;
+	width: 40%;
+	height: 50px;
+	background-color: navy;
+	margin: 5%;
+	transition: width 3s;
+}
+
+.flex-container > :nth-child(4) > div:first-child {
+	/* 기본값 */
+	transition-delay: 0s;
+}
+.flex-container > :nth-child(4) > div:nth-child(2) {
+	/* 마우스 올리고 2초가 있어야 변화한다 */
+	transition-delay: 2s;
+}
+
+.flex-container > :nth-child(4) > div:hover {
+	width: 90%;
+}
