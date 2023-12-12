@@ -1,0 +1,19 @@
+#grid-container {
+	display: grid;
+	/* 3 columns */
+	grid-template-columns: 100px 200px 100px;
+	/* 3 rows */
+	grid-template-rows: 80px 350px 80px;
+}
+
+#grid-container > div {
+	font-size: 30px;
+	border: solid black 3px;
+	/* grid는 padding을 해도 요소가 넘치지 않고 조절된다 */
+	padding: 15px;
+}
+
+#div7 {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
