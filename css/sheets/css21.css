@@ -1,0 +1,50 @@
+@media screen {
+	.media {
+		color: red;
+	}
+}
+
+@media print {
+	.media {
+		color: blue;
+	}
+}
+
+/* viewport크기가 0~600px 사이일 때 적용될 스타일 시트 */
+@media all and (max-width: 600px) {
+	.scsize {
+		border: 3px solid black;
+	}
+}
+@media all and (min-width: 601px) {
+	.scsize {
+		border: 3px solid orange;
+	}
+}
+
+/* 그냥 적용하는 설정은 데스크탑 설정 */
+
+.grid {
+	display: grid;
+
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid > div {
+	border: solid 1px black;
+	height: 100%;
+}
+
+/* 태블릿 크기의 화면으로 볼때 설정 */
+@media all and (max-width: 800px) {
+	.grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* 스마트폰 크기의 화면으로 볼때 설정 */
+@media all and (max-width: 640px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+}
