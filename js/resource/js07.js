@@ -1,3 +1,4 @@
+// 연습문제
 // const gugudan = document.getElementById("gugudan");
 
 // gugudan.style.display = "grid";
@@ -42,3 +43,18 @@ for (let gop = 1; gop <= 9; gop++) {
 		gugudanDiv.innerHTML += makeGugudanDiv(dan, gop);
 	}
 }
+
+////////////////////////////////////////////////////////////////////////
+
+// while문의 활용
+// Java랑 다르게 조건문에 0을 제외한 숫자를 넣으면 true로 간주한다
+let i = 0;
+while (true) {
+	console.log(i++);
+
+	if (i === 10) {
+		break;
+	}
+}
+
+console.log("while문이 끝났습니다..");
