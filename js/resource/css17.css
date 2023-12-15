@@ -1,0 +1,9 @@
+[id$="-students"] {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 3px;
+}
+
+[id$="-students"] > div {
+	border: solid 1px black;
+}
