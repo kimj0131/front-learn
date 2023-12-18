@@ -1,0 +1,28 @@
+.box {
+	box-sizing: border-box;
+	border: solid 3px black;
+	width: 150px;
+	height: 150px;
+	padding: 30px;
+	margin: 15px;
+}
+
+.bubble {
+	border: 3px solid black;
+	padding: 10px;
+	margin: 50px;
+	box-sizing: border-box;
+	font-size: 25px;
+}
+
+#outer {
+	background-color: tomato;
+}
+
+#inner1 {
+	background-color: seagreen;
+}
+
+#inner2 {
+	background-color: skyblue;
+}
