@@ -1,6 +1,6 @@
 // setItem(key, value) : 해당 스토리지에 데이터를 저장한다
-sessionStorage.setItem("money", 5000);
-localStorage.setItem("age", 80);
+// sessionStorage.setItem("money", 5000);
+// localStorage.setItem("age", 80);
 
 // removeItem(key) : key를 사용해 해당 데이터를 삭제한다
 // sessionStorage.removeItem("money");
