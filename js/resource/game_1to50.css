@@ -49,7 +49,7 @@
 .grid_x5 {
 	box-sizing: border-box;
 	width: 100%;
-	height: 90%;
+	height: 500px;
 	/* background-color: #999; */
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -65,8 +65,8 @@
 
 .tapBox {
 	display: block;
-	width: 100%;
-	height: 100%;
+	width: 90px;
+	height: 90px;
 	font-weight: bold;
 	color: white;
 	line-height: 100px;
@@ -78,7 +78,23 @@
 
 .rank {
 	width: 250px;
-	height: 600px;
+	height: 560px;
 	border: 1px solid black;
 	margin-left: 20px;
+}
+.rank > p {
+	border-bottom: 1px solid black;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	margin: 0;
+
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.rank > div {
+	padding-top: 1.5px;
+	padding-left: 15px;
+	font-size: 17px;
 }

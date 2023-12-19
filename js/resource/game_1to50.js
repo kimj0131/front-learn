@@ -64,7 +64,7 @@ grid_x5.addEventListener("click", (e) => {
 		e.target.style.opacity = 0;
 		e.target.style.transition = "all 0.5s";
 		setTimeout(() => {
-			// 26번까지 다른번호가 등장하게 설정
+			// 카운트 26번까지 다른번호가 등장하고 배경색이 다르게 설정
 			if (boxCount <= 26) {
 				const boxNum = getRanNumToArr();
 				e.target.textContent = boxNum;
@@ -80,7 +80,7 @@ grid_x5.addEventListener("click", (e) => {
 	}
 	// 클릭한 타겟의 innerText가 50일 경우
 	// 타이머종료 후 로컬스토리지에 저장 (게임종료)
-	if (e.target.innerText === "2") {
+	if (e.target.innerText === "50") {
 		playEnd();
 		saveLocalStorage();
 	}
@@ -146,14 +146,14 @@ const rank = document.querySelector(".rank");
 
 // 리스트를 넣는 메서드
 const rankingListUpdate = () => {
-	for (let i = 0; i < rankSize; i++) {
+	for (let i = 0; i < 20; i++) {
 		const newRankDiv = document.createElement("div");
 		const ranking = () => {
 			let next = rankList[0];
 			rankList.shift();
 			return next;
 		};
-		const newRankText = document.createTextNode(i + 1 + "위 : " + ranking() + "초");
+		const newRankText = document.createTextNode(i + 1 + "위 : " + ranking() + " 초");
 
 		newRankDiv.appendChild(newRankText);
 		rank.appendChild(newRankDiv);
