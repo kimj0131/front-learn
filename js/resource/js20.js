@@ -88,18 +88,32 @@ const shiftBtn2 = document.querySelector("#shiftBtn2");
 const unshiftBtn2 = document.querySelector("#unshiftBtn2");
 const out2 = document.querySelector("#out2");
 
+const pushChild = () => out2.appendChild(createStarDiv());
+const popChild = () => out2.removeChild(out2.lastElementChild);
+const shiftChild = () => out2.removeChild(out2.firstElementChild);
+const unshiftChild = () => out2.insertBefore(createStarDiv(), out2.firstElementChild);
+
 pushBtn2.addEventListener("click", (e) => pushChild());
 popBtn2.addEventListener("click", (e) => popChild());
 shiftBtn2.addEventListener("click", (e) => shiftChild());
 unshiftBtn2.addEventListener("click", (e) => unshiftChild());
 
-const getLastChild = () => document.querySelector("#out2 > div:last-child");
-
-const pushChild = () => out2.appendChild(createStarDiv());
-const popChild = () => out2.removeChild(out2.lastElementChild);
-// const popChild = () => out2.removeChild(getLastChild());
-const shiftChild = () => out2.removeChild(out2.firstElementChild);
-const unshiftChild = () => out2.insertBefore(createStarDiv(), out2.firstElementChild);
+document.body.addEventListener("keydown", (e) => {
+	// console.log(e);
+	if (e.key === "ArrowUp") {
+		e.preventDefault();
+		pushChild();
+	} else if (e.key === "ArrowDown") {
+		e.preventDefault();
+		popChild();
+	} else if (e.key === "ArrowLeft") {
+		e.preventDefault();
+		shiftChild();
+	} else if (e.key === "ArrowRight") {
+		e.preventDefault();
+		unshiftChild();
+	}
+});
 
 let starCount = 0;
 const createStarDiv = () => {
