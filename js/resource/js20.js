@@ -22,7 +22,6 @@ function addGrade() {
 	newDiv.classList.add("material-symbols-outlined");
 	newDiv.style.fontSize = "30px";
 	newDiv.style.color = "#" + Math.round(Math.random() * 0xffffff).toString(16);
-
 	// newDiv.style.color = gradeColors[parseInt(Math.random() * gradeColors.length)];
 	// newDiv.style.color = "red";
 
@@ -68,17 +67,55 @@ pushBtn.addEventListener("click", (e) => {
 
 popBtn.addEventListener("click", (e) => {
 	const removeWrap = document.querySelector("#out").lastChild;
-	// console.log(removeDiv);
 	out.removeChild(removeWrap);
-});
-
-shiftBtn.addEventListener("click", (e) => {
-	const oldWrap = document.querySelector("#out").firstChild;
-
-	out.insertBefore(addGrade(countNum), oldWrap);
 });
 
 unshiftBtn.addEventListener("click", (e) => {
+	const oldWrap = document.querySelector("#out").firstChild;
+	out.insertBefore(addGrade(countNum), oldWrap);
+});
+
+shiftBtn.addEventListener("click", (e) => {
 	const removeWrap = document.querySelector("#out").firstChild;
 	out.removeChild(removeWrap);
 });
+
+// 풀이
+
+const pushBtn2 = document.querySelector("#pushBtn2");
+const popBtn2 = document.querySelector("#popBtn2");
+const shiftBtn2 = document.querySelector("#shiftBtn2");
+const unshiftBtn2 = document.querySelector("#unshiftBtn2");
+const out2 = document.querySelector("#out2");
+
+pushBtn2.addEventListener("click", (e) => pushChild());
+popBtn2.addEventListener("click", (e) => popChild());
+shiftBtn2.addEventListener("click", (e) => shiftChild());
+unshiftBtn2.addEventListener("click", (e) => unshiftChild());
+
+const getLastChild = () => document.querySelector("#out2 > div:last-child");
+
+const pushChild = () => out2.appendChild(createStarDiv());
+const popChild = () => out2.removeChild(out2.lastElementChild);
+// const popChild = () => out2.removeChild(getLastChild());
+const shiftChild = () => out2.removeChild(out2.firstElementChild);
+const unshiftChild = () => out2.insertBefore(createStarDiv(), out2.firstElementChild);
+
+let starCount = 0;
+const createStarDiv = () => {
+	const starDiv = document.createElement("div");
+	const starText = document.createTextNode("grade");
+
+	starDiv.classList.add("material-symbols-outlined");
+	starDiv.classList.add("star");
+	starDiv.appendChild(starText);
+
+	const numDiv = document.createElement("div");
+	const numText = document.createTextNode(starCount++);
+
+	numDiv.classList.add("starNum");
+	numDiv.appendChild(numText);
+	starDiv.appendChild(numDiv);
+
+	return starDiv;
+};
