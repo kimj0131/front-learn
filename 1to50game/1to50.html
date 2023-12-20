@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>1to50</title>
+
+		<link rel="stylesheet" href="./resource/game_1to50.css" />
+	</head>
+	<body>
+		<!-- 5 x 5 타일에 제일먼저 보이는 타일에는 1~25까지 -->
+		<!-- 뒤에 숨겨진 타일은 26~50까지 랜덤으로 지정되어있음 >> 번호를 배열로 저장해둠 -->
+		<!-- 제일 작은 숫자(1)를 클릭되지않으면 이벤트 발생하지 않음(타이머작동) -->
+		<!-- 제일작은 숫자(1)를 클릭하면 투명도 0처리, 타이머 작동 -->
+		<!--  >> 투명도를 0으로 만든 후 setTime으로 지정한 시간마다 span에 숫자와 배경색을 변경 후 투명도 1처리 -->
+		<!-- 제일 큰 숫자 혹은 50을 클릭하면 이벤트 발생(타이머 종료, 로컬스토리지에 값저장) -->
+		<div class="reset">다시하기</div>
+		<div class="game">
+			<div class="main_wrap">
+				<div class="timer"></div>
+				<div class="stage">
+					<div class="grid_x5"></div>
+				</div>
+			</div>
+			<div class="rank">
+				<p>Ranking</p>
+			</div>
+		</div>
+
+		<script src="./resource/game_1to50.js"></script>
+	</body>
+</html>
